@@ -1,0 +1,16 @@
+{
+  "Examinations": {
+    "BPSC": {
+      "Preliminary Examination": [
+        "Exam Analysis 2024",
+        "Exam Analysis 2023"
+      ]
+    },
+    "UPPSC": {
+      "Preliminary Examination": [
+        "Exam Analysis 2024",
+        "Exam Analysis 2023"
+      ]
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{{ define "main" }}
+  <h1>Examinations</h1>
+
+  {{- $data := site.Data.categories.Examinations }}
+
+  <ul>
+    {{- range $catName, $subcats := $data }}
+      <li>
+        <strong>{{ $catName }}</strong>
+        <ul>
+          {{- range $subcatName, $subsubcats := $subcats }}
+            <li>
+              <em>{{ $subcatName }}</em>
+              <ul>
+                {{- range $index, $item := $subsubcats }}
+                  <li>
+                    <a href="{{ printf "/examinations/%s/%s/%s/" (urlize $catName) (urlize $subcatName) (urlize $item) }}">
+                      {{ $item }}
+                    </a>
+                  </li>
+                {{- end }}
+              </ul>
+            </li>
+          {{- end }}
+        </ul>
+      </li>
+    {{- end }}
+  </ul>
+{{ end }}
