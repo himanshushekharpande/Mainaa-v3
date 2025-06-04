@@ -3,24 +3,24 @@
   url = ""
   weight = -110
 
-[[main]]
-  name = "Archives"
-  url = "post/rich-content/"
-  weight = -109
+#[[main]]
+#  name = "Archives"
+#  url = "post/rich-content/"
+#  weight = -109
 
 # Submenus are done this way: parent -> identifier
-[[main]]
-  name = "Links"
-  identifier = "Links"
-  weight = -108
-[[main]]
-  parent = "Links"
-  name = "LinkedIn"
-  url = "https://www.linkedin.com/"
-[[main]]
-  parent = "Links"
-  name = "X"
-  url = "https://x.com/"
+#[[main]]
+#  name = "Links"
+#  identifier = "Links"
+#  weight = -108
+#[[main]]
+#  parent = "Links"
+#  name = "LinkedIn"
+#  url = "https://www.linkedin.com/"
+#[[main]]
+#  parent = "Links"
+#  name = "X"
+#  url = "https://x.com/"
 
 [[main]]
   name = "About"
@@ -28,11 +28,40 @@
   weight = -107
 
 
-# ← New top-level sections:
 [[main]]
-  name   = "Examinations"
-  url    = "examinations/"
+  name = "Examinations"
+  identifier = "examinations"
   weight = -106
+  url = "/examinations/"
+
+[[main]]
+  parent = "examinations"
+  name = "BPSC"
+  url = "examinations/bpsc/"
+  identifier = "bpsc"
+  weight = -105
+
+[[main]]
+  parent = "examinations"
+  name = "UPPSC"
+  url = "examinations/uppsc/"
+  identifier = "uppsc"
+  weight = -104
+
+[[main]]
+  parent     = "bpsc"
+  name       = "Preliminary Examination"
+  url        = "examinations/bpsc/preliminary-examination/"
+  weight     = -103
+
+[[main]]
+  parent     = "uppsc"
+  name       = "Preliminary Examination"
+  url        = "examinations/uppsc/preliminary-examination/"
+  weight     = -102
+
+
+
 
 # social menu links
 
@@ -44,7 +73,7 @@
 [[social]]
   name = "X"
   weight = 2
-  url = "https://x.com/#"
+  url = "https://x.com/mainaa_news"
 [[social]]
   name = "linkedin"
   weight = 3

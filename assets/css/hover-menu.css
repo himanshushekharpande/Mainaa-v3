@@ -1,0 +1,83 @@
+/* Examinations specific styles */
+.examinations-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.examinations-link {
+  padding-right: 0.25rem !important;
+}
+
+.examinations-toggle {
+  padding-left: 0.25rem !important;
+  padding-right: 0.5rem !important;
+}
+
+.examinations-toggle::after {
+  display: inline-block;
+  content: "▾";
+  border: none !important;
+  vertical-align: middle;
+}
+
+/* Show dropdown on hover */
+@media (min-width: 992px) {
+  .examinations-item:hover > .dropdown-menu {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+}
+
+/* Examinations menu - Desktop */
+@media (min-width: 992px) {
+  .examinations-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .examinations-item > .nav-link {
+    padding-right: 0.25rem;
+  }
+  
+  .examinations-item > .dropdown-toggle {
+    padding-left: 0.25rem;
+    padding-right: 0.5rem;
+    cursor: pointer;
+  }
+  
+  .examinations-item > .dropdown-toggle::after {
+    content: "▾";
+    display: inline-block;
+    border: none !important;
+    vertical-align: middle;
+  }
+  
+  .examinations-item:hover > .dropdown-menu {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+}
+
+/* Examinations menu - Mobile */
+@media (max-width: 991px) {
+  .examinations-item {
+    display: block;
+    padding: 0;
+  }
+  
+  .examinations-item > .nav-link {
+    display: inline-block;
+    width: calc(100% - 40px);
+    padding: 0.5rem 1rem !important;
+  }
+  
+  .examinations-item > .dropdown-toggle {
+    display: inline-block;
+    width: 40px;
+    text-align: center;
+  }
+}

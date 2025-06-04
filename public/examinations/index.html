@@ -7,7 +7,7 @@
   
   >
   <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-<title>Clarity</title>
+<title>Examinations | Clarity</title>
 <meta charset="utf-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -17,14 +17,26 @@
 <meta property="og:locale" content="en" />
 
 <meta property="og:type" content="article">
-<meta name="description" content="" />
+<meta name="description" content="Welcome to our Examinations hub. Pick a subcategory below to dive in:
+
+  
+    
+  
+    BPSC Yearly Examination Analysis
+    UPPSC Yearly Examination Analysis …" />
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:creator" content="@janedoe">
-<meta name="twitter:title" content="" />
+<meta name="twitter:creator" content="@mainaa_news">
+<meta name="twitter:title" content="Examinations" />
 <meta name="twitter:image" content="http://localhost:1313/images/thumbnail.png"/>
 <meta property="og:url" content="http://localhost:1313/examinations/" />
-<meta property="og:title" content="" />
-<meta property="og:description" content="" />
+<meta property="og:title" content="Examinations" />
+<meta property="og:description" content="Welcome to our Examinations hub. Pick a subcategory below to dive in:
+
+  
+    
+  
+    BPSC Yearly Examination Analysis
+    UPPSC Yearly Examination Analysis …" />
 <meta property="og:image" content="http://localhost:1313/images/thumbnail.png" />
 
 <link rel="apple-touch-icon" sizes="180x180" href="http://localhost:1313/icons/apple-touch-icon.png">
@@ -36,16 +48,47 @@
 
 
 
-<link rel="preload" href="http://localhost:1313/css/styles.dc38388a8f0b890e788bd3a99b7495d14e7d5ac4359ed3b49abeb778497863b284ad4cc7e496ef58c84139295f9bafed82f5a41345eda86bd2d429cccb7c2596.css" integrity = "sha512-3Dg4io8LiQ54i9Opm3SV0U59WsQ1ntO0mr63eEl4Y7KErUzH5JbvWMhBOSlfm6/tgvWkE0XtqGvS1CnMy3wllg==" as="style" crossorigin="anonymous">
+<link rel="preload" href="http://localhost:1313/css/styles.0d04724e741a2f9e7dbc0b041616bafed04082afcea826b1f55498e384b02004a9a6bcdaeae7a6483fcd8bf5b60b73f8d1dc1b5af5090179de2a39d2870a8d03.css" integrity = "sha512-DQRyTnQaL559vAsEFha6/tBAgq/OqCax9VSY44SwIASpprza6uemSD/Ni/W2C3P40dwbWvUJAXneKjnShwqNAw==" as="style" crossorigin="anonymous">
 
 
 
-<link rel="preload" href="http://localhost:1313/en/js/bundle.e59d7962fafc4d42a679a1c495e285cfd6cf1f6bf2f6174c78f8d36798f29fb202b3bebd747d683dcd7ed94367ad02e911fe66897776fec9dd8c38c3d01ae20e.js" as="script" integrity=
-"sha512-5Z15Yvr8TUKmeaHEleKFz9bPH2vy9hdMePjTZ5jyn7ICs769dH1oPc1&#43;2UNnrQLpEf5miXd2/sndjDjD0BriDg==" crossorigin="anonymous">
+<link rel="preload" href="http://localhost:1313/en/js/bundle.ea19c14707bd50daffaf974ca9f10e27e3920c38b5ddaa8c47342be24d3a28f9a56a543f9a2072dbd489b5c524d4499f9adaff8d52530254c7fcfd9aa0d2ab64.js" as="script" integrity=
+"sha512-6hnBRwe9UNr/r5dMqfEOJ&#43;OSDDi13aqMRzQr4k06KPmlalQ/miBy29SJtcUk1Emfmtr/jVJTAlTH/P2aoNKrZA==" crossorigin="anonymous">
 
 
-<link rel="stylesheet" type="text/css" href="http://localhost:1313/css/styles.dc38388a8f0b890e788bd3a99b7495d14e7d5ac4359ed3b49abeb778497863b284ad4cc7e496ef58c84139295f9bafed82f5a41345eda86bd2d429cccb7c2596.css" integrity="sha512-3Dg4io8LiQ54i9Opm3SV0U59WsQ1ntO0mr63eEl4Y7KErUzH5JbvWMhBOSlfm6/tgvWkE0XtqGvS1CnMy3wllg==" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="http://localhost:1313/css/styles.0d04724e741a2f9e7dbc0b041616bafed04082afcea826b1f55498e384b02004a9a6bcdaeae7a6483fcd8bf5b60b73f8d1dc1b5af5090179de2a39d2870a8d03.css" integrity="sha512-DQRyTnQaL559vAsEFha6/tBAgq/OqCax9VSY44SwIASpprza6uemSD/Ni/W2C3P40dwbWvUJAXneKjnShwqNAw==" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/hover-menu.css"><link rel="stylesheet" href="/css/custom.css">
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  
+  const examsToggle = document.querySelector('.examinations-toggle');
+  if (examsToggle) {
+    examsToggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      const parent = this.closest('.examinations-item');
+      const menu = parent.querySelector('.dropdown-menu');
+      
+      
+      if (menu.style.display === 'block') {
+        menu.style.display = 'none';
+      } else {
+        menu.style.display = 'block';
+      }
+    });
+  }
+  
+  
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.examinations-item')) {
+      const openMenu = document.querySelector('.examinations-item .dropdown-menu[style="display: block;"]');
+      if (openMenu) {
+        openMenu.style.display = 'none';
+      }
+    }
+  });
+});
+</script>
   </head>
   <body
     data-code="7"
@@ -80,21 +123,15 @@
     <a href="http://localhost:1313/" class="nav_item" title="Home">Home </a>
   </div>
   <div class="nav_parent">
-    <a href="http://localhost:1313/post/rich-content/" class="nav_item" title="Archives">Archives </a>
-  </div>
-  <div class="nav_parent">
-    <a href="http://localhost:1313/" class="nav_item" title="Links">Links <img src='http://localhost:1313/icons/caret-icon.svg' alt="icon" class="nav_icon"></a>
-    <div class="nav_sub">
-      <span class="nav_child"></span>
-        <a href="https://www.linkedin.com/" class="nav_child nav_item" title="LinkedIn">LinkedIn</a>
-        <a href="https://x.com/" class="nav_child nav_item" title="X">X</a>
-    </div>
-  </div>
-  <div class="nav_parent">
     <a href="http://localhost:1313/about/" class="nav_item" title="About">About </a>
   </div>
-  <div class="nav_parent nav_active">
-    <a href="http://localhost:1313/examinations/" class="nav_item" title="Examinations">Examinations </a>
+  <div class="nav_parent">
+    <a href="http://localhost:1313/examinations/" class="nav_item" title="Examinations">Examinations <img src='http://localhost:1313/icons/caret-icon.svg' alt="icon" class="nav_icon"></a>
+    <div class="nav_sub">
+      <span class="nav_child"></span>
+        <a href="http://localhost:1313/examinations/bpsc/" class="nav_child nav_item" title="BPSC">BPSC</a>
+        <a href="http://localhost:1313/examinations/uppsc/" class="nav_child nav_item" title="UPPSC">UPPSC</a>
+    </div>
   </div>
       
       <div class="nav_parent">
@@ -116,7 +153,7 @@
 </svg>
 
   </a>
-  <a href="https://x.com/#">
+  <a href="https://x.com/mainaa_news">
     <svg class="icon">
   <title>x</title>
   <use xlink:href="#x"></use>
@@ -149,50 +186,65 @@
 </header>
 
     <main>
-  <h1>Examinations</h1>
+  <h1>Examinations</h1>  
 
-  <ul>
-      <li>
-        <strong>BPSC</strong>
-        <ul>
-            <li>
-              <em>Preliminary Examination</em>
-              <ul>
-                  <li>
-                    <a href="/examinations/bpsc/preliminary-examination/exam-analysis-2024/">
-                      Exam Analysis 2024
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/examinations/bpsc/preliminary-examination/exam-analysis-2023/">
-                      Exam Analysis 2023
-                    </a>
-                  </li>
-              </ul>
-            </li>
-        </ul>
-      </li>
-      <li>
-        <strong>UPPSC</strong>
-        <ul>
-            <li>
-              <em>Preliminary Examination</em>
-              <ul>
-                  <li>
-                    <a href="/examinations/uppsc/preliminary-examination/exam-analysis-2024/">
-                      Exam Analysis 2024
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/examinations/uppsc/preliminary-examination/exam-analysis-2023/">
-                      Exam Analysis 2023
-                    </a>
-                  </li>
-              </ul>
-            </li>
-        </ul>
-      </li>
-  </ul>
+  
+    
+      
+      <ul>
+        
+          <li><strong>BPSC</strong>
+            <ul>
+              
+                <li><em>Preliminary Examination</em>
+                  <ul>
+                    
+                      <li>
+                        <a href="/examinations/bpsc/preliminary-examination/exam-analysis-2024/">
+                          Exam Analysis 2024
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/examinations/bpsc/preliminary-examination/exam-analysis-2023/">
+                          Exam Analysis 2023
+                        </a>
+                      </li>
+                    
+                  </ul>
+                </li>
+              
+            </ul>
+          </li>
+        
+          <li><strong>UPPSC</strong>
+            <ul>
+              
+                <li><em>Preliminary Examination</em>
+                  <ul>
+                    
+                      <li>
+                        <a href="/examinations/uppsc/preliminary-examination/exam-analysis-2024/">
+                          Exam Analysis 2024
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/examinations/uppsc/preliminary-examination/exam-analysis-2023/">
+                          Exam Analysis 2023
+                        </a>
+                      </li>
+                    
+                  </ul>
+                </li>
+              
+            </ul>
+          </li>
+        
+      </ul>
+
+    
+  
 
     </main><svg width="0" height="0" class="hidden">
   <symbol viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" id="facebook">
@@ -292,9 +344,9 @@
   </div>
 </footer>
 
-<script type="text/javascript" src="http://localhost:1313/en/js/bundle.e59d7962fafc4d42a679a1c495e285cfd6cf1f6bf2f6174c78f8d36798f29fb202b3bebd747d683dcd7ed94367ad02e911fe66897776fec9dd8c38c3d01ae20e.js" integrity="sha512-5Z15Yvr8TUKmeaHEleKFz9bPH2vy9hdMePjTZ5jyn7ICs769dH1oPc1&#43;2UNnrQLpEf5miXd2/sndjDjD0BriDg==" crossorigin="anonymous"></script>
+<script type="text/javascript" src="http://localhost:1313/en/js/bundle.ea19c14707bd50daffaf974ca9f10e27e3920c38b5ddaa8c47342be24d3a28f9a56a543f9a2072dbd489b5c524d4499f9adaff8d52530254c7fcfd9aa0d2ab64.js" integrity="sha512-6hnBRwe9UNr/r5dMqfEOJ&#43;OSDDi13aqMRzQr4k06KPmlalQ/miBy29SJtcUk1Emfmtr/jVJTAlTH/P2aoNKrZA==" crossorigin="anonymous"></script>
 
   <script src="http://localhost:1313/js/search.min.4c2b0421d128bbd7c43fc7d662fb5dfd8e439c60ee92c900a26d72d9c3271d2256f5bac9f6f919cddfd55101e9272898716cbb3381b4360bf43a66a5f7664f54.js"></script>
-
+<script type="text/javascript" src="/js/custom.js"></script>
   </body>
 </html>

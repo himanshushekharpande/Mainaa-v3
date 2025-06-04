@@ -1,0 +1,16 @@
+<li class="nav-item dropdown examinations-item">
+  <a href="/examinations/" class="nav-link">Examinations</a>
+  <a class="nav-link dropdown-toggle" 
+     href="#" 
+     role="button" 
+     data-toggle="dropdown"
+     aria-haspopup="true" 
+     aria-expanded="false">
+    <span class="sr-only">Toggle dropdown</span>
+  </a>
+  <div class="dropdown-menu">
+    {{ range .Children }}
+      <a class="dropdown-item" href="{{ .URL }}">{{ .Name }}</a>
+    {{ end }}
+  </div>
+</li>

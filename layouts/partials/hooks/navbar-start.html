@@ -1,0 +1,39 @@
+{{ $currentPage := . }}
+<ul class="navbar-nav mr-auto">
+  {{ range .Site.Menus.main }}
+    {{ if eq .Identifier "examinations" }}
+      <!-- Custom handling for Examinations -->
+      <li class="nav-item dropdown examinations-item">
+        <a href="{{ .URL }}" class="nav-link">{{ .Name }}</a>
+        <a class="nav-link dropdown-toggle" 
+           href="#" 
+           role="button" 
+           data-toggle="dropdown"
+           aria-haspopup="true" 
+           aria-expanded="false">
+          <span class="sr-only">Toggle dropdown</span>
+        </a>
+        <div class="dropdown-menu">
+          {{ range .Children }}
+            <a class="dropdown-item" href="{{ .URL }}">{{ .Name }}</a>
+          {{ end }}
+        </div>
+      </li>
+    {{ else if .HasChildren }}
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          {{ .Name }}
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          {{ range .Children }}
+            <a class="dropdown-item" href="{{ .URL }}">{{ .Name }}</a>
+          {{ end }}
+        </div>
+      </li>
+    {{ else }}
+      <li class="nav-item">
+        <a class="nav-link" href="{{ .URL }}">{{ .Name }}</a>
+      </li>
+    {{ end }}
+  {{ end }}
+</ul>

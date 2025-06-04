@@ -1,0 +1,7 @@
+[
+  {{- $pages := .Pages }}
+  {{- range $i, $p := $pages -}}
+    {{- if $i }},{{ end -}}
+    {{- dict "title" $p.Title "url" $p.RelPermalink "date" (time.Format "2006-01-02" $p.Date) | jsonify }}
+  {{- end }}
+]

@@ -1,0 +1,12 @@
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Make Examinations menu clickable
+  const examsMenu = document.querySelector('a.nav-link[href="#"]');
+  if (examsMenu && examsMenu.textContent.trim() === 'Examinations') {
+    examsMenu.href = '{{ .Site.BaseURL }}examinations/';
+    examsMenu.addEventListener('click', function(e) {
+      window.location.href = this.href;
+    });
+  }
+});
+</script>

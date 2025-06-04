@@ -21,7 +21,7 @@
 <meta property="og:type" content="article">
 <meta name="description" content="" />
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:creator" content="@janedoe">
+<meta name="twitter:creator" content="@mainaa_news">
 <meta name="twitter:title" content="Series" />
 <meta name="twitter:image" content="http://localhost:1313/images/thumbnail.png"/>
 <meta property="og:url" content="http://localhost:1313/pt/series/" />
@@ -38,16 +38,47 @@
 
 
 
-<link rel="preload" href="http://localhost:1313/css/styles.dc38388a8f0b890e788bd3a99b7495d14e7d5ac4359ed3b49abeb778497863b284ad4cc7e496ef58c84139295f9bafed82f5a41345eda86bd2d429cccb7c2596.css" integrity = "sha512-3Dg4io8LiQ54i9Opm3SV0U59WsQ1ntO0mr63eEl4Y7KErUzH5JbvWMhBOSlfm6/tgvWkE0XtqGvS1CnMy3wllg==" as="style" crossorigin="anonymous">
+<link rel="preload" href="http://localhost:1313/css/styles.0d04724e741a2f9e7dbc0b041616bafed04082afcea826b1f55498e384b02004a9a6bcdaeae7a6483fcd8bf5b60b73f8d1dc1b5af5090179de2a39d2870a8d03.css" integrity = "sha512-DQRyTnQaL559vAsEFha6/tBAgq/OqCax9VSY44SwIASpprza6uemSD/Ni/W2C3P40dwbWvUJAXneKjnShwqNAw==" as="style" crossorigin="anonymous">
 
 
 
-<link rel="preload" href="http://localhost:1313/pt/js/bundle.b86978792d41d971fbb81cd9fc0729c2d4b10eb51b307957c3d188f34b66e52572448ade60cd3cb5d3add053ff8e7e84327ba5c755a54dc5e6e2f5b6812152cf.js" as="script" integrity=
-"sha512-uGl4eS1B2XH7uBzZ/AcpwtSxDrUbMHlXw9GI80tm5SVyRIreYM08tdOt0FP/jn6EMnulx1WlTcXm4vW2gSFSzw==" crossorigin="anonymous">
+<link rel="preload" href="http://localhost:1313/pt/js/bundle.547f755cb812a55bc7ecc846b1d71c0a962e3a2cf9c276665f001db4cbfd1ff2aa473505f975c9ce4a715a227ad2172cf7bc7efa335ce032dd6f7f5573634025.js" as="script" integrity=
+"sha512-VH91XLgSpVvH7MhGsdccCpYuOiz5wnZmXwAdtMv9H/KqRzUF&#43;XXJzkpxWiJ60hcs97x&#43;&#43;jNc4DLdb39Vc2NAJQ==" crossorigin="anonymous">
 
 
-<link rel="stylesheet" type="text/css" href="http://localhost:1313/css/styles.dc38388a8f0b890e788bd3a99b7495d14e7d5ac4359ed3b49abeb778497863b284ad4cc7e496ef58c84139295f9bafed82f5a41345eda86bd2d429cccb7c2596.css" integrity="sha512-3Dg4io8LiQ54i9Opm3SV0U59WsQ1ntO0mr63eEl4Y7KErUzH5JbvWMhBOSlfm6/tgvWkE0XtqGvS1CnMy3wllg==" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="http://localhost:1313/css/styles.0d04724e741a2f9e7dbc0b041616bafed04082afcea826b1f55498e384b02004a9a6bcdaeae7a6483fcd8bf5b60b73f8d1dc1b5af5090179de2a39d2870a8d03.css" integrity="sha512-DQRyTnQaL559vAsEFha6/tBAgq/OqCax9VSY44SwIASpprza6uemSD/Ni/W2C3P40dwbWvUJAXneKjnShwqNAw==" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/hover-menu.css"><link rel="stylesheet" href="/css/custom.css">
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  
+  const examsToggle = document.querySelector('.examinations-toggle');
+  if (examsToggle) {
+    examsToggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      const parent = this.closest('.examinations-item');
+      const menu = parent.querySelector('.dropdown-menu');
+      
+      
+      if (menu.style.display === 'block') {
+        menu.style.display = 'none';
+      } else {
+        menu.style.display = 'block';
+      }
+    });
+  }
+  
+  
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.examinations-item')) {
+      const openMenu = document.querySelector('.examinations-item .dropdown-menu[style="display: block;"]');
+      if (openMenu) {
+        openMenu.style.display = 'none';
+      }
+    }
+  });
+});
+</script>
   </head>
   <body
     data-code="7"
@@ -78,20 +109,6 @@
       
         
 
-  <div class="nav_parent">
-    <a href="http://localhost:1313/pt/" class="nav_item" title="Início">Início </a>
-  </div>
-  <div class="nav_parent">
-    <a href="http://localhost:1313/pt/" class="nav_item" title="Links">Links <img src='http://localhost:1313/icons/caret-icon.svg' alt="icon" class="nav_icon"></a>
-    <div class="nav_sub">
-      <span class="nav_child"></span>
-        <a href="https://www.linkedin.com/" class="nav_child nav_item" title="LinkedIn">LinkedIn</a>
-        <a href="https://x.com/" class="nav_child nav_item" title="X">X</a>
-    </div>
-  </div>
-  <div class="nav_parent">
-    <a href="http://localhost:1313/pt/about/" class="nav_item" title="Sobre">Sobre </a>
-  </div>
       
       <div class="nav_parent">
         <a href="#" class="nav_item">🌐</a>
@@ -122,71 +139,6 @@
 <div class="grid-inverse wrap content">
   <div>
     <ul class="posts" id="posts">
-        <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="http://localhost:1313/pt/series/guia-de-temas/" title="Guia De Temas">Guia De Temas</a>
-      </h3>
-      
-  <div class="post_meta">
-    <span><svg class="icon">
-  <title>calendar</title>
-  <use xlink:href="#calendar"></use>
-</svg>
-</span>
-    <span class="post_date">
-      Mar 11, 2019	  
-    </span>
-    <span class="post_time"> · 0 min read</span>
-    <span class="page_only">&nbsp;·
-  <div class="post_share">
-    Partilhar:
-    <a href="https://twitter.com/intent/tweet?text=Guia%20De%20Temas&url=http%3a%2f%2flocalhost%3a1313%2fpt%2fseries%2fguia-de-temas%2f&tw_p=tweetbutton" class="twitter" title="Partilhar Twitter" target="_blank" rel="nofollow">
-      <svg class="icon">
-  <title>twitter</title>
-  <use xlink:href="#twitter"></use>
-</svg>
-
-    </a>
-    <a href="https://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fpt%2fseries%2fguia-de-temas%2f&t=Guia%20De%20Temas" class="facebook" title="Partilhar Facebook" target="_blank" rel="nofollow">
-      <svg class="icon">
-  <title>facebook</title>
-  <use xlink:href="#facebook"></use>
-</svg>
-
-    </a>
-    <a href="#linkedinshare" id = "linkedinshare" class="linkedin" title="Partilhar LinkedIn" rel="nofollow">
-      <svg class="icon">
-  <title>linkedin</title>
-  <use xlink:href="#linkedin"></use>
-</svg>
-
-    </a>
-    <a href="http://localhost:1313/pt/series/guia-de-temas/" title="Copy Link" class="link link_yank">
-      <svg class="icon">
-  <title>copy</title>
-  <use xlink:href="#copy"></use>
-</svg>
-
-    </a>
-  </div>
-  </span>
-  </div>
-
-    </div>
-      <div class="excerpt_footer">
-        <div class="pale">
-          
-            <p></p>
-          
-          <br>
-          <a href="http://localhost:1313/pt/series/guia-de-temas/" title="Ler Mais" class="excerpt_more button">Ler Mais</a>
-        </div>
-      </div>
-    </div>
-  </li>
-
       <li>
       </li>
     </ul>
@@ -218,64 +170,6 @@
     <h2 class="mt-4">Artigos Mais Recentes</h2>
     <ul class="flex-column">
     </ul>
-    <div>
-      <h2 class="mt-4 taxonomy" id="categories-section">Categorias</h2>
-      <nav class="tags_nav">
-        <a href='http://localhost:1313/pt/categories/sintaxe/' class="post_tag button button_translucent" title="sintaxe">
-          SINTAXE
-          <span class="button_tally">1</span>
-        </a>
-        
-        <a href='http://localhost:1313/pt/categories/temas/' class="post_tag button button_translucent" title="temas">
-          TEMAS
-          <span class="button_tally">1</span>
-        </a>
-        
-        
-      </nav>
-    </div>
-    <div>
-      <h2 class="mt-4 taxonomy" id="series-section">Séries</h2>
-      <nav class="tags_nav">
-        <a href='http://localhost:1313/pt/series/guia-de-temas/' class="post_tag button button_translucent" title="guia de temas">
-          GUIA DE TEMAS
-          <span class="button_tally">1</span>
-        </a>
-        
-        
-      </nav>
-    </div>
-    <div>
-      <h2 class="mt-4 taxonomy" id="tags-section">Etiquetas</h2>
-      <nav class="tags_nav">
-        <a href='http://localhost:1313/pt/tags/css/' class="post_tag button button_translucent" title="css">
-          CSS
-          <span class="button_tally">1</span>
-        </a>
-        
-        <a href='http://localhost:1313/pt/tags/destacado/' class="post_tag button button_translucent" title="destacado">
-          DESTACADO
-          <span class="button_tally">1</span>
-        </a>
-        
-        <a href='http://localhost:1313/pt/tags/html/' class="post_tag button button_translucent" title="html">
-          HTML
-          <span class="button_tally">1</span>
-        </a>
-        
-        <a href='http://localhost:1313/pt/tags/markdown/' class="post_tag button button_translucent" title="markdown">
-          MARKDOWN
-          <span class="button_tally">1</span>
-        </a>
-        
-        <a href='http://localhost:1313/pt/tags/temas/' class="post_tag button button_translucent" title="temas">
-          TEMAS
-          <span class="button_tally">1</span>
-        </a>
-        
-        
-      </nav>
-    </div>
   </section>
 </aside>
 
@@ -380,9 +274,9 @@
   </div>
 </footer>
 
-<script type="text/javascript" src="http://localhost:1313/pt/js/bundle.b86978792d41d971fbb81cd9fc0729c2d4b10eb51b307957c3d188f34b66e52572448ade60cd3cb5d3add053ff8e7e84327ba5c755a54dc5e6e2f5b6812152cf.js" integrity="sha512-uGl4eS1B2XH7uBzZ/AcpwtSxDrUbMHlXw9GI80tm5SVyRIreYM08tdOt0FP/jn6EMnulx1WlTcXm4vW2gSFSzw==" crossorigin="anonymous"></script>
+<script type="text/javascript" src="http://localhost:1313/pt/js/bundle.547f755cb812a55bc7ecc846b1d71c0a962e3a2cf9c276665f001db4cbfd1ff2aa473505f975c9ce4a715a227ad2172cf7bc7efa335ce032dd6f7f5573634025.js" integrity="sha512-VH91XLgSpVvH7MhGsdccCpYuOiz5wnZmXwAdtMv9H/KqRzUF&#43;XXJzkpxWiJ60hcs97x&#43;&#43;jNc4DLdb39Vc2NAJQ==" crossorigin="anonymous"></script>
 
   <script src="http://localhost:1313/js/search.min.4c2b0421d128bbd7c43fc7d662fb5dfd8e439c60ee92c900a26d72d9c3271d2256f5bac9f6f919cddfd55101e9272898716cbb3381b4360bf43a66a5f7664f54.js"></script>
-
+<script type="text/javascript" src="/js/custom.js"></script>
   </body>
 </html>

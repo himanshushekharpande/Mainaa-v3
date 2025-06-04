@@ -1,29 +1,52 @@
 {{ define "main" }}
-  <h1>Examinations</h1>
+  <h1>{{ .Title }}</h1>
 
-  {{- $data := site.Data.categories.Examinations }}
+  {{- $examKey := .Title }}  {{/* Capitalized as per your JSON */}}
+  {{- $allData := site.Data.categories.Examinations }}
 
-  <ul>
-    {{- range $catName, $subcats := $data }}
-      <li>
-        <strong>{{ $catName }}</strong>
-        <ul>
-          {{- range $subcatName, $subsubcats := $subcats }}
-            <li>
-              <em>{{ $subcatName }}</em>
-              <ul>
-                {{- range $index, $item := $subsubcats }}
-                  <li>
-                    <a href="{{ printf "/examinations/%s/%s/%s/" (urlize $catName) (urlize $subcatName) (urlize $item) }}">
-                      {{ $item }}
-                    </a>
-                  </li>
-                {{- end }}
-              </ul>
-            </li>
-          {{- end }}
-        </ul>
-      </li>
-    {{- end }}
-  </ul>
+  {{ if eq .Section "examinations" }}
+    {{ if eq .RelPermalink "/examinations/" }}
+      {{/* On: /examinations/ — Show all exams */}}
+      <ul>
+        {{ range $examName, $stages := $allData }}
+          <li><strong>{{ $examName }}</strong>
+            <ul>
+              {{ range $stageName, $items := $stages }}
+                <li><em>{{ $stageName }}</em>
+                  <ul>
+                    {{ range $items }}
+                      <li>
+                        <a href="{{ printf "/examinations/%s/%s/%s/" (urlize $examName) (urlize $stageName) (urlize .) }}">
+                          {{ . }}
+                        </a>
+                      </li>
+                    {{ end }}
+                  </ul>
+                </li>
+              {{ end }}
+            </ul>
+          </li>
+        {{ end }}
+      </ul>
+
+    {{ else }}
+      {{/* On: /examinations/bpsc/ or /examinations/uppsc/ — Show only relevant section */}}
+      {{ $examData := index $allData $examKey }}
+      <ul>
+        {{ range $stageName, $items := $examData }}
+          <li><em>{{ $stageName }}</em>
+            <ul>
+              {{ range $items }}
+                <li>
+                  <a href="{{ printf "/examinations/%s/%s/%s/" (urlize $examKey) (urlize $stageName) (urlize .) }}">
+                    {{ . }}
+                  </a>
+                </li>
+              {{ end }}
+            </ul>
+          </li>
+        {{ end }}
+      </ul>
+    {{ end }}
+  {{ end }}
 {{ end }}

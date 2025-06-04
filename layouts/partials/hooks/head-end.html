@@ -1,3 +1,34 @@
 {{ if or .Params.math .Site.Params.math }}
 {{ partial "math.html" . }}
 {{ end }}
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Handle Examinations menu on mobile
+  const examsToggle = document.querySelector('.examinations-toggle');
+  if (examsToggle) {
+    examsToggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      const parent = this.closest('.examinations-item');
+      const menu = parent.querySelector('.dropdown-menu');
+      
+      // Toggle menu visibility
+      if (menu.style.display === 'block') {
+        menu.style.display = 'none';
+      } else {
+        menu.style.display = 'block';
+      }
+    });
+  }
+  
+  // Close dropdown when clicking elsewhere
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.examinations-item')) {
+      const openMenu = document.querySelector('.examinations-item .dropdown-menu[style="display: block;"]');
+      if (openMenu) {
+        openMenu.style.display = 'none';
+      }
+    }
+  });
+});
+</script>
